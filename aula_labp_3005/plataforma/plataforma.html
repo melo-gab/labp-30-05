@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="plataforma.css" media="screen" />
+    <title>Plataforma de Jogos MJ (muitos jogos)</title>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+          new Splide( '#image-carousel' ).mount();
+        } );
+    </script>
+</head>
+<body>
+
+    <div id="cabecalho">
+        <h1>MUITOS JOGOS JOGOS</h1>
+    </div>
+    
+    <div id="fundo_carrossel">
+     <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <a href="jogodaforca.html">
+        <img src="https://media.gazetadopovo.com.br/2021/07/08133112/vereador-hadesh-pt-minsiterio-publico.jpeg" style="width:100%;">
+      </a>
+      <div class="text"><p>Jogo da forca</p></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 6</div>
+      <a href="batalhanaval.html">
+        <img src="https:/upload.wikimedia.org/wikipedia/pt/2/22/Titanic_poster.jpg" style="width:100%">
+      </a>
+      <div class="text"><p>Batalha naval</p></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <a href="jogos/adivinheonumero.html">
+        <img src="https:/m.media-amazon.com/images/I/61oWFaO3KBL._AC_UF1000,1000_QL80_.jpg" style="width:100%">
+      </a>
+      <div class="text"><p>Adivinhe o número</p></div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6 </div>
+        <a href="jogos/quiz.html">
+        <img src="https:/classic.exame.com/wp-content/uploads/2017/02/2185394405-youtube.png" style="width:100%">
+        </a>
+        <div class="text"><p>Quiz</p></div>
+      </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <a href="pedrapapeltesoura.html">
+        <img src="https:/www.sedufsm.org.br/midia/2022/05/F27-12589.jpg
+        " style="width:100%">
+        </a>
+        <div class="text"><p>Pedra, papel e tesoura</p></div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <a href="torredehanoi.html">
+        <img src="https:/s2.static.brasilescola.uol.com.br/be/2023/04/torres-gemeas.jpg
+        " style="width:100%">
+        </a>
+        <div class="text"><p>Torre de Hanói</p></div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+  
+    <!-- The dots/circles -->
+    <div id="div_pontos" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    </div> 
+    </div>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+</script>
+</body>
+</html>
